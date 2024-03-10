@@ -1,0 +1,59 @@
+.bio table{
+    border-collapse:collapse ;
+    clear: both;
+}
+.bio table tr td{
+    border:3px inset black;
+    border-color:gray;
+    border-collapse: collapse;
+    padding: 7px;
+    clear: left;
+}
+
+.summary p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: rgb(74, 74, 74);
+    
+}
+.skills li{
+    font-weight: bolder;
+    padding: 10px;
+    margin-bottom: 5px; 
+    border-radius: 5px; 
+    color:darkgreen
+}
+
+.image{
+    text-align: center;
+    float:center;
+}
+
+.academics table{
+    border-collapse:collapse ;
+    clear: both;
+}
+.academics table  tr td {
+    border:3px inset black;
+    border-color:gray;
+    border-collapse: collapse;
+    padding: 7px;
+    clear: left;
+}
+.awards li{
+    font-weight: bolder;
+    padding: 10px;
+    margin-bottom: 5px; 
+    border-radius: 5px; 
+    color:darkgreen
+}
+.contact {
+    text-align: center;
+    
+    
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}

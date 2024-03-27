@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <style>
+        .navbar-brand {
+      font-family: fantasy;
+      padding-left: 20px;
+      font-size: x-large;
+    }
+    .navbar-nav .nav-link {
+      transition: color 0.3s;
+      
+    }
+    .navbar-nav{
+      float:right;
+      color: white;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #007bff; 
+    }
+    .navbar-nav .nav-link:hover::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: red; 
+      transition: 2s;
+    }
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+      transition: 2s;
+    }
+
+    .card {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 15px 15px 15px 15px rgba(0,0,0,0.1);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .card-text {
+      color: #555;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Bata</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-4">Our Products</h1>
+    <p class="text-center mb-4">
+      Buy shoes effortlessly with our streamlined process. Explore our diverse collection,
+       select your perfect pair, and complete your purchase with ease. Whether online or in-store,
+        shopping for shoes has never been simpler.
+    </p>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src=images\s1.jpg class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <h5 class="card-title">Bata Comfort Flex Sneakers</h5>
+            <ul>
+              <li>Lightweight design for all-day comfort
+                <li>Breathable mesh upper for enhanced ventilation
+                <li>Flexible sole for natural foot movement</li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src=images\s2.jpg class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <h5 class="card-title">Bata Urban Chic Loafers</h5>
+            <ul>
+              <li>Stylish suede finish for a sophisticated look
+                <li>Cushioned insole for long-lasting comfort
+               <li> Slip-on design for easy wearability</li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src=images\s3.jpg class="card-img-top" alt="Product 3">
+          <div class="card-body">
+            <h5 class="card-title">Bata Classic Leather</h5>
+            <ul>
+              <li>Premium leather construction for durability
+                <li>Soft textile lining for added warmth
+                <li>Sturdy heel for reliable support and traction</li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src=images\s4.jpg class="card-img-top" alt="Product 4">
+          <div class="card-body">
+            <h5 class="card-title">Bata Active Sports Sandals</h5>
+            <ul>
+              <li>Durable rubber outsole for traction and stability
+                <li>Adjustable straps for a customized fit
+                <li>Shock-absorbing midsole for impact protection</li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

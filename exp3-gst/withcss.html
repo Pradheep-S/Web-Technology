@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="brand">Bata India Ltd<br>
+        
+    </div>
+    <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;margin-top: 0;">GST no. : 06AABCB1043Q3ZO</p>
+    <hr>
+        
+    <form id="myForm" class="form-container">
+        <h2 class="form-title">Order Form</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone no:</label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="30" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="product">Select a product:</label>
+            <select name="product" id="product" required>
+                <option value="" disabled selected>Select a product</option>
+                <option value="s1">Bata Comfort Flex Sneakers</option>
+                <option value="s2">Bata Urban Chic Loafers</option>
+                <option value="s3">Bata Classic Leather</option>
+                <option value="s4">Bata Active Sports</option>
+            </select>
+        <div class="form-group">
+            <label for="quantity"><br>Quantity</label>
+            <input type="number" id="quantity" min="1" max="10" value="1" required>
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="cost">Price:</label>
+            <span id="cost"></span>
+        </div>
+        <div style="margin-bottom: 25px;">
+            <label for="payment" style="margin-bottom: 5px;"><b>Payment Method:</b></label>
+            <input type="radio" id="upi" name="payment" value="UPI">
+            <label for="upi">UPI</label>
+            <input type="radio" id="cash" name="payment" value="Cash">
+            <label for="cash">Cash</label>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Buy Now" class="btn-submit">
+        </div>
+        
+    </form>
+
+    <div id="billSection" class="bill-section"></div>
+
+    <!-- Print button -->
+    <!-- <button id="printButton" class="btn-print">Print Bill</button> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

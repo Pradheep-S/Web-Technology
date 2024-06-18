@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <style>
+        nav {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            z-index: 1000; /* Ensure the navbar is on top of other elements */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            color: #fff;
+        }   
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="donors.html">Donors</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <br><br><br>
+        <h1>Register to Donate Your Eyes</h1>
+        <form id="form" method="get">
+            <label for="username">Name:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <span id="usernameError" class="error"></span><br>
+
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender">
+                <option value="" selected disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            <span id="genderError" class="error"></span><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" min="18" name="age"><br>
+            <span id="ageError" class="error"></span><br>
+
+            <label for="mobile">Mobile Number:</label><br>
+            <input type="text" id="mobile" name="mobile"><br>
+            <span id="mobileError" class="error"></span><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <span id="emailError" class="error"></span><br>
+
+            <label for="desc">Reason to Donate:</label><br>
+            <textarea name="desc" id="desc" rows="3" cols="73"></textarea><br>
+            <span id="descError" class="error"></span><br>
+
+            <div class="container1">
+                <button type="submit" onclick="set('/insert', event)">Register</button>
+                <button type="submit" onclick="set('/delete', event)">Delete Donor</button>
+                <button type="submit" onclick="set('/update', event)">Update Details</button>
+                <button type="button" onclick="handleReport(event)">Report</button>
+            </div>
+        </form>
+        
+        <script>
+            function set(path, event) {
+                const form = document.getElementById('form');
+                form.action = 'http://localhost:7050' + path;
+                if (validateForm(event)) {
+                    form.submit(); // Submit the form after setting the action
+                }
+            }
+        
+            function validateForm(event) {
+                event.preventDefault();
+                let isValid = true;
+        
+                // Clear previous errors
+                document.querySelectorAll('.error').forEach(span => span.textContent = '');
+        
+                // Validate Name
+                const username = document.getElementById('username').value.trim();
+                if (!username) {
+                    document.getElementById('usernameError').textContent = 'Name is required';
+                    isValid = false;
+                }
+        
+                // Validate Gender
+                const gender = document.getElementById('gender').value;
+                if (!gender) {
+                    document.getElementById('genderError').textContent = 'Gender is required';
+                    isValid = false;
+                }
+        
+                // Validate Age
+                const age = document.getElementById('age').value;
+                if (!age || age < 18) {
+                    document.getElementById('ageError').textContent = 'Valid age (18 or older) is required';
+                    isValid = false;
+                }
+        
+                // Validate Mobile Number
+                const mobile = document.getElementById('mobile').value.trim();
+                const mobileRegex = /^[0-9]{10}$/;
+                if (!mobile || !mobileRegex.test(mobile)) {
+                    document.getElementById('mobileError').textContent = 'Valid 10-digit mobile number is required';
+                    isValid = false;
+                }
+        
+                // Validate Email
+                const email = document.getElementById('email').value.trim();
+                if (!email || !validateEmail(email)) {
+                    document.getElementById('emailError').textContent = 'Valid email address is required';
+                    isValid = false;
+                }
+        
+                // Validate Reason to Donate
+                const desc = document.getElementById('desc').value.trim();
+                if (!desc) {
+                    document.getElementById('descError').textContent = 'Reason to donate is required';
+                    isValid = false;
+                }
+        
+                return isValid;
+            }
+        
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            function handleReport(event) {
+                event.preventDefault();
+                window.location.href = 'http://localhost:7050/display';
+            }
+        </script>
+    </main>
+</body>
+</html>

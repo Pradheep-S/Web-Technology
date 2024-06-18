@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Donation</title>
+    <link rel="stylesheet" href="register.css">
+    <style>
+        /* General Reset */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            z-index: 1000; /* Ensure the navbar is on top of other elements */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Main Content */
+        main {
+            padding: 100px 20px; /* Added padding to fill the screen */
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+        .button-link {
+            display: inline-block;
+            padding: 7px 25px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-link:hover {
+            background-color: #555;
+        }
+
+        /* Additional Styles */
+        .benefits {
+            text-align: left;
+            margin-top: 65px;
+            
+        }
+
+        .benefits h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .benefits ul {
+            
+            list-style-type:circle;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .benefits li {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .statistics {
+            
+            padding: 50px 30px;
+            
+        }
+
+        .statistics h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .statistics p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="donors.html">Donors</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome to the Eye Donation Website</h1>
+        <p>Your decision to donate can change lives. Join us in making a difference.</p>
+        <img src="assets\eye1.png" alt="img" class="logo">
+        <a href="register.html" class="button-link">Register as a Donor</a>
+        
+        <div class="benefits">
+            <h2>Benefits of Eye Donation:</h2>
+            <ul>
+                <li>Restore vision and transform lives.</li>
+                <li>Help someone see the world again.</li>
+                <li>Leave a lasting legacy of kindness and generosity.</li>
+                <li>Bring hope to individuals suffering from visual impairment.</li>
+                <li>Contribute to scientific research and medical advancements.</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="statistics">
+            <h2>Eye Donation Statistics:</h2>
+            <p>Did you know that:</p>
+            <ul>
+                <li>More than 10 million people worldwide suffer from corneal blindness.</li>
+                <li>Every 5 seconds, someone in the world goes blind, but 80% of blindness is preventable or treatable.</li>
+                <li>One eye donor can potentially restore vision for up to two individuals.</li>
+                <li>Eye donation is a simple process that does not disfigure the donor.</li>
+            </ul>
+            <p>By donating your eyes, you can make a significant impact on someone's life. Register as a donor today!</p>
+        </div><hr>
+    </main>
+</body>
+</html>
